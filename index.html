@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI基金投顾智能平台 | OpenClaw Fund Advisor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="report-styles.css">
+    <link rel="stylesheet" href="enhanced-styles.css">
+    <link rel="stylesheet" href="personal-center.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- 动态背景 -->
+    <div class="animated-bg"></div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">OpenClaw Fund Advisor</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active" data-page="home">首页</a>
+                <a href="#fund-analysis" class="nav-link" data-page="fund-analysis">基金深度分析</a>
+                <a href="#portfolio-diagnosis" class="nav-link" data-page="portfolio-diagnosis">组合诊断优化</a>
+                <a href="#family-config" class="nav-link" data-page="family-config">家庭配置方案</a>
+                <a href="#feishu-chat" class="nav-link" data-page="feishu-chat">飞书智能对话</a>
+                <a href="#personal-center" class="nav-link" data-page="personal-center">个人分析中心</a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <a href="#home" class="mobile-nav-link active" data-page="home">首页</a>
+            <a href="#fund-analysis" class="mobile-nav-link" data-page="fund-analysis">基金深度分析</a>
+            <a href="#portfolio-diagnosis" class="mobile-nav-link" data-page="portfolio-diagnosis">组合诊断优化</a>
+            <a href="#family-config" class="mobile-nav-link" data-page="family-config">家庭配置方案</a>
+            <a href="#feishu-chat" class="mobile-nav-link" data-page="feishu-chat">飞书智能对话</a>
+            <a href="#personal-center" class="mobile-nav-link" data-page="personal-center">个人分析中心</a>
+        </div>
+    </nav>
+
+    <!-- 主页 -->
+    <section id="home" class="page active">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">AI驱动的智能基金投顾平台</h1>
+                <p class="hero-subtitle">基于OpenClaw技术的专业基金分析与配置解决方案</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">86.12%</div>
+                        <div class="stat-label">最高成立以来收益</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">21.96亿</div>
+                        <div class="stat-label">管理资产规模</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.7%</div>
+                        <div class="stat-label">分析准确率</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button class="feishu-btn" onclick="showPage('feishu-chat')">
+                        <span class="feishu-icon">📱</span>
+                        跳转飞书对话
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card" data-page="fund-analysis">
+                <div class="feature-icon">🔍</div>
+                <h3>基金深度分析</h3>
+                <p>专业级的基金多维分析，包含业绩表现、风险指标、持仓穿透和Brinson归因分析</p>
+                <div class="feature-tags">
+                    <span class="tag">业绩归因</span>
+                    <span class="tag">风险控制</span>
+                    <span class="tag">持仓分析</span>
+                </div>
+            </div>
+            
+            <div class="feature-card" data-page="portfolio-diagnosis">
+                <div class="feature-icon">📊</div>
+                <h3>组合诊断优化</h3>
+                <p>智能组合风险评估、相关性分析和蒙特卡洛模拟，提供科学的优化建议</p>
+                <div class="feature-tags">
+                    <span class="tag">相关性分析</span>
+                    <span class="tag">风险回测</span>
+                    <span class="tag">优化方案</span>
+                </div>
+            </div>
+            
+            <div class="feature-card" data-page="family-config">
+                <div class="feature-icon">🏠</div>
+                <h3>家庭配置方案</h3>
+                <p>基于家庭财务状况的个性化配置策略，实现风险收益最优平衡</p>
+                <div class="feature-tags">
+                    <span class="tag">财务规划</span>
+                    <span class="tag">风险匹配</span>
+                    <span class="tag">定投策略</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>开始您的智能投资之旅</h2>
+            <p>选择上方服务开始分析，或通过飞书与AI助手直接对话</p>
+            <button class="cta-button" onclick="showPage('fund-analysis')">立即体验</button>
+        </div>
+    </section>
+
+    <!-- 基金深度分析页面 -->
+    <section id="fund-analysis" class="page">
+        <div class="page-header">
+            <h1>基金深度分析报告</h1>
+            <p>中银港股通医药混合A (020397) | 专业级多维分析</p>
+        </div>
+        <!-- 这里将完整插入基金深度分析报告内容 -->
+        <div id="fund-analysis-content" class="report-content"></div>
+    </section>
+
+    <!-- 组合诊断优化页面 -->
+    <section id="portfolio-diagnosis" class="page">
+        <div class="page-header">
+            <h1>基金组合诊断与优化报告</h1>
+            <p>智能风险评估与优化方案 | 蒙特卡洛模拟</p>
+        </div>
+        <!-- 这里将完整插入组合诊断优化报告内容 -->
+        <div id="portfolio-diagnosis-content" class="report-content"></div>
+    </section>
+
+    <!-- 家庭配置方案页面 -->
+    <section id="family-config" class="page">
+        <div class="page-header">
+            <h1>家庭基金配置方案报告</h1>
+            <p>个性化财务规划 | 风险匹配配置</p>
+        </div>
+        <!-- 这里将完整插入家庭配置方案报告内容 -->
+        <div id="family-config-content" class="report-content"></div>
+    </section>
+
+    <!-- 飞书对话页面 -->
+    <section id="feishu-chat" class="page">
+        <div class="page-header">
+            <h1>飞书智能对话</h1>
+            <p>与OpenClaw AI助手直接对话，生成个性化分析报告</p>
+        </div>
+        <div class="feishu-container">
+            <div class="card">
+                <div class="card-title">💬 智能对话界面</div>
+                <div class="chat-interface">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <div class="message-text">您好！我是OpenClaw基金投顾AI助手。您可以询问任何关于基金分析、组合优化或家庭配置的问题，我将为您生成专业的分析报告。</div>
+                                <div class="message-time">刚刚</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chatInput" placeholder="输入您的问题，例如：分析华夏成长基金000001" class="chat-input">
+                        <button id="sendMessage" class="send-btn">发送</button>
+                    </div>
+                    <div class="quick-actions">
+                        <h4>快速提问：</h4>
+                        <div class="quick-buttons">
+                            <button class="quick-btn" data-question="分析华夏成长基金000001">分析华夏成长</button>
+                            <button class="quick-btn" data-question="优化我的基金组合">组合优化建议</button>
+                            <button class="quick-btn" data-question="家庭资产配置方案">家庭配置</button>
+                            <button class="quick-btn" data-question="风险评估和回撤分析">风险分析</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">📱 飞书集成</div>
+                <div class="feishu-integration">
+                    <div class="integration-info">
+                        <h3>飞书深度集成</h3>
+                        <p>通过飞书与OpenClaw AI助手进行深度对话，生成的报告将自动同步到您的个人分析中心。</p>
+                        <div class="integration-features">
+                            <div class="feature">
+                                <span class="feature-icon">🔄</span>
+                                <span>实时同步</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">📊</span>
+                                <span>智能分析</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">🎯</span>
+                                <span>个性化推荐</span>
+                            </div>
+                        </div>
+                        <button class="feishu-launch-btn" onclick="launchFeishu()">
+                            <span class="feishu-icon"></span>
+                            启动飞书应用
+                        </button>
+                        <button class="feishu-website-btn" onclick="openFeishuWebsite()">
+                            <span class="feishu-icon"></span>
+                            跳转飞书官网
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">🤖 AI生成报告</div>
+                <div class="dynamic-reports-container" id="dynamicReports">
+                    <div class="empty-state">
+                        <div class="empty-icon">📊</div>
+                        <h3>暂无AI生成报告</h3>
+                        <p>通过上方对话与AI助手交流后，生成的分析报告将显示在这里</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人分析中心 -->
+    <section id="personal-center" class="page">
+        <div class="personal-container">
+            <!-- 用户资料卡片 -->
+            <div class="personal-header-card">
+                <div class="personal-avatar">
+                    <div class="avatar-circle">👤</div>
+                </div>
+                <div class="personal-info">
+                    <h2>欢迎回来，投资者</h2>
+                    <p>管理您的投资分析报告和个人数据</p>
+                </div>
+            </div>
+
+            <!-- 统计数据 -->
+            <div class="personal-stats-grid">
+                <div class="personal-stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="totalReports">0</div>
+                        <div class="stat-label">总报告数</div>
+                    </div>
+                </div>
+                <div class="personal-stat-card">
+                    <div class="stat-icon">💬</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="totalChats">0</div>
+                        <div class="stat-label">对话次数</div>
+                    </div>
+                </div>
+                <div class="personal-stat-card">
+                    <div class="stat-icon">⏰</div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="serviceTime">0天</div>
+                        <div class="stat-label">服务时间</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 快捷功能 -->
+            <div class="personal-quick-actions">
+                <div class="quick-action-card" onclick="exportAllReports()">
+                    <div class="action-icon">📥</div>
+                    <div class="action-title">导出所有报告</div>
+                    <div class="action-desc">下载所有分析报告</div>
+                </div>
+                <div class="quick-action-card" onclick="clearAllReports()">
+                    <div class="action-icon">🗑️</div>
+                    <div class="action-title">清空报告</div>
+                    <div class="action-desc">删除所有分析报告</div>
+                </div>
+                <div class="quick-action-card" onclick="showAnalysisHistory()">
+                    <div class="action-icon">📈</div>
+                    <div class="action-title">分析历史</div>
+                    <div class="action-desc">查看历史分析记录</div>
+                </div>
+                <div class="quick-action-card" onclick="showSettings()">
+                    <div class="action-icon">⚙️</div>
+                    <div class="action-title">个人设置</div>
+                    <div class="action-desc">配置个人偏好</div>
+                </div>
+            </div>
+
+            <!-- 最近活动 -->
+            <div class="personal-activity-section">
+                <h3>🕒 最近活动</h3>
+                <div class="activity-controls" style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                    <button class="history-btn" onclick="exportActivityHistory()" style="background: #4CAF50; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">
+                        📥 导出记录
+                    </button>
+                    <button class="history-btn" onclick="clearActivityHistory()" style="background: #f44336; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">
+                        🗑️ 清空记录
+                    </button>
+                    <button class="history-btn" onclick="showAllActivities()" style="background: #2196F3; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">
+                        📋 查看全部
+                    </button>
+                </div>
+                <div class="activity-list" id="activityList">
+                    <div class="empty-activity">
+                        <div class="empty-icon">📝</div>
+                        <p>暂无活动记录</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+/* 额外的样式增强 - 为优化后的内容添加 */
+
+/* 区域标题 */
+.section-heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e8f4fd;
+}
+
+/* 副标题 */
+.sub-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* 内容段落 */
+.content-paragraph {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #5d6d7e;
+    margin-bottom: 10px;
+}
+
+/* 注释文本 */
+.note-text {
+    font-size: 13px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* 边距类 */
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+/* 文本居中 */
+.text-center {
+    text-align: center;
+}
+
+/* 洞察图标 */
+.insight-icon {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+/* 警告图标 */
+.warning-icon {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+/* 数据表格样式 */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.data-table thead {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+}
+
+.data-table th {
+    padding: 15px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.data-table tbody tr:hover {
+    background: #f8f9fa;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* 卡片增强 */
+.card {
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 性能项目增强 */
+.performance-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.performance-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.performance-item:hover::before {
+    transform: scaleX(1);
+}
+
+/* 标签增强 */
+.tag {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+    z-index: -1;
+}
+
+.tag:hover::before {
+    left: 100%;
+}
+
+/* 洞察框增强 */
+.insight-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.insight-box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, transparent 70%);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+/* 警告框增强 */
+.warning-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.warning-box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 152, 0, 0.1) 0%, transparent 70%);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* 基金项目增强 */
+.fund-item,
+.portfolio-item,
+.stock-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.fund-item::before,
+.portfolio-item::before,
+.stock-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #3498db, #2ecc71);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.fund-item:hover::before,
+.portfolio-item:hover::before,
+.stock-item:hover::before {
+    transform: scaleY(1);
+}
+
+/* 表格容器增强 */
+.table-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.table-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71, #f39c12, #e74c3c);
+}
+
+/* 响应式改进 */
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 16px;
+    }
+    
+    .performance-item {
+        padding: 15px;
+    }
+    
+    .performance-value {
+        font-size: 20px;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+/* 加载动画 */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(52, 152, 219, 0.3);
+    border-radius: 50%;
+    border-top-color: #3498db;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 工具提示样式 */
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background: #2c3e50;
+    color: white;
+    font-size: 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+[data-tooltip]:hover::before {
+    opacity: 1;
+    visibility: visible;
+    bottom: calc(100% + 8px);
+}
+
+/* 进度条样式 */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e8f4fd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* 徽章样式 */
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #e8f4fd;
+    color: #3498db;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge.success {
+    background: #e8f5e8;
+    color: #27ae60;
+}
+
+.badge.warning {
+    background: #fff3e0;
+    color: #f39c12;
+}
+
+.badge.danger {
+    background: #ffebee;
+    color: #e74c3c;
+}
+
+/* 分隔线 */
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e8f4fd, transparent);
+    margin: 20px 0;
+}
+
+/* 空状态 */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #7f8c8d;
+}
+
+.empty-state-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.empty-state-text {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.empty-state-subtext {
+    font-size: 14px;
+    color: #95a5a6;
+}

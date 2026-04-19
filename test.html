@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面 - 内容验证</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>内容验证测试</h1>
+        
+        <div id="test-fund-analysis" style="margin-bottom: 30px;">
+            <h2>基金深度分析内容</h2>
+            <div id="fund-analysis-test"></div>
+        </div>
+        
+        <div id="test-portfolio-diagnosis" style="margin-bottom: 30px;">
+            <h2>组合诊断优化内容</h2>
+            <div id="portfolio-diagnosis-test"></div>
+        </div>
+        
+        <div id="test-family-config" style="margin-bottom: 30px;">
+            <h2>家庭配置方案内容</h2>
+            <div id="family-config-test"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // 测试加载所有内容
+        document.addEventListener('DOMContentLoaded', function() {
+            // 加载基金深度分析内容
+            document.getElementById('fund-analysis-test').innerHTML = getFundAnalysisContent();
+            
+            // 加载组合诊断优化内容
+            document.getElementById('portfolio-diagnosis-test').innerHTML = getPortfolioDiagnosisContent();
+            
+            // 加载家庭配置方案内容
+            document.getElementById('family-config-test').innerHTML = getFamilyConfigContent();
+            
+            console.log('所有内容加载完成');
+            console.log('基金深度分析内容长度:', getFundAnalysisContent().length);
+            console.log('组合诊断优化内容长度:', getPortfolioDiagnosisContent().length);
+            console.log('家庭配置方案内容长度:', getFamilyConfigContent().length);
+        });
+    </script>
+</body>
+</html>
